@@ -1,9 +1,13 @@
-function GetPizzaDetails(size, crust, topping){
+function GetPizzaDetails(name, size, crust, topping){
+    this.name = name;
     this.size = size;
     this.crust = crust;
     this.topping = topping;
 }
 
+GetPizzaDetails.prototype.getOrderTotal = function(){
+     return getPizzaPrice(this.size) + getCrustPrice(this.crust) + getToppingPrice(this.topping)   
+}
 let pizzaPrices = {
     small: 600,
     medium: 800,
@@ -83,7 +87,12 @@ $(document).ready(function () {
         });
         // console.log(getPizzaPrice(pizzaSize))
         // console.log(getCrustPrice(pizzaCrust))
-        console.log(getToppingPrice(pizzaTopping))
+        // console.log(getToppingPrice(pizzaTopping))
+        // console.log(orderTotal)
+        let thisOrder = new GetPizzaDetails(pizzaName, pizzaSize, pizzaCrust, pizzaTopping)
+        console.log(thisOrder)
+        console.log(thisOrder.getOrderTotal())
+        $("#order").append('<tr><td id="pizza-name"> + ');
     });
     
 });
