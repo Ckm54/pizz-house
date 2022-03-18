@@ -22,22 +22,41 @@ nav .links .link {
 nav .links .link a {
     text-decoration: none;
     color: #62741b;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 20px;
+    transition: all 0.3s ease;
+}
+nav .links .link a:hover {
+    color: #988262;
 }
 nav .links .order-btn {
-    background: #e48c04;
-    text-align: center;
+    background: #f18f01;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid #e48c04;
+}
+nav .links .order-btn:hover {
+    background: none;
 }
 nav .logo-text {
     width: fit-content;
     height: fit-content;
+    transition: all 0.3s ease-in;
+}
+nav .logo-text  a {
+    text-decoration: none;
 }
 nav .logo-text h1 {
     color: #e48c04;
 }
+nav .logo-text h1:hover {
+    color: #62741b;
+}
 nav .logo-text h1 span {
     color: #62741b;
+}
+nav .logo-text h1 span:hover {
+    color: #e48c04;
 }
 .header-content {
     display: flex;
