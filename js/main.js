@@ -1,4 +1,5 @@
 let deliveryCost = 200;
+let delivery = false;
 
 function GetPizzaDetails(name, size, crust, topping){
     this.name = name;
@@ -86,11 +87,17 @@ function getTotalQuantity(){
     console.log($("#order-total").innerHTML)
 }
 
-function getTotalMoney(prices){
+function getTotalMoney(prices, deliver){
     let total = 0;
     total += prices.reduce((a, b) => a + b);
-    return total
+    if(deliver === false){
+        return total
+    }else {
+        return total + deliveryCost
+    }
 }
+
+
 $(document).ready(function () {
     $("button.btn-add").click(function (e) { 
         e.preventDefault();
@@ -119,20 +126,31 @@ $(document).ready(function () {
 
     $("button#checkout").click(function (e) { 
         e.preventDefault();
-        let totalPayable = getTotalMoney(totalOrderPrices)
+        let totalPayable = getTotalMoney(totalOrderPrices, false)
         $("button#checkout").hide();
         $("button.deliver").slideDown(1000);
         $("#delivery-cost").slideDown(1000);
         $("#order-total-message").append("Your total bill is Ksh. " + totalPayable);
-        
+        delivery = false
     });
     
     $("button#deliver").click(function (e) { 
         e.preventDefault();
         $("button#deliver").hide();
         $(".delivery").show();
-        let totalPayable = getTotalMoney(totalOrderPrices)+deliveryCost;
+        let totalPayable = getTotalMoney(totalOrderPrices, true);
         $("#order-total-message").text("")
         $("#order-total-message").append("Your total bill with delivery fee is Ksh. " + totalPayable);
+        delivery = true
+    });
+
+    $("button#place-order").click(function (e) { 
+        e.preventDefault();
+        if(delivery){
+            console.log(getTotalMoney(totalOrderPrices, true))
+        }
+        else {
+            console.log(getTotalMoney(totalOrderPrices, false))
+        }
     });
 });
