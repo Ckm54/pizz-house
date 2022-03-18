@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&display=swap');
+
 *{
     box-sizing: border-box;
 }
@@ -31,8 +33,8 @@ nav .links .link a:hover {
 }
 nav .links .order-btn {
     background: #f18f01;
-    padding: 5px 10px;
-    border-radius: 5px;
+    padding: 5px 15px;
+    border-radius: 50px;
     border: 2px solid #e48c04;
 }
 nav .links .order-btn:hover {
@@ -58,11 +60,50 @@ nav .logo-text h1 span {
 nav .logo-text h1 span:hover {
     color: #e48c04;
 }
-.header-content {
+
+
+.header {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+.header-text {
+    margin-left: 15%;
+    text-align: justify;
+    position: relative;
+}
+.header-text h1 {
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 100px;
+}
+.header-text h1 span {
+    color: #e48c04;
+}
+.header-text p {
+    color: #e48c04;
+    font-size: 30px;
+}
+.header-text button {
+    border: 2px solid #f18f01;
+    background-color: #f18f01;
+    padding: 20px 30px;
+    text-align: center;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    
+}
+.header-text button a {
+    text-decoration: none;
+    color: #fff;
+}
+.header-text button:hover {
+    background-color: transparent;
+}
+.header-text button:hover a {
+    color: #f18f01;
+}
+
+
 
 .services, .menu .menu-items {
     display: flex;
