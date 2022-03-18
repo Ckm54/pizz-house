@@ -4,14 +4,39 @@
 .header  {
     text-align: center;
 }
-.logo-text {
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    margin: 0 30px;
+}
+nav .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav .links .link {
+    margin-right: 20px;
+    padding: 5px;
+}
+nav .links .link a {
+    text-decoration: none;
+    color: #62741b;
+    font-weight: 600;
+    font-size: 20px;
+}
+nav .links .order-btn {
+    background: #e48c04;
+    text-align: center;
+}
+nav .logo-text {
     width: fit-content;
     height: fit-content;
 }
-.logo-text h1 {
+nav .logo-text h1 {
     color: #e48c04;
 }
-.logo-text h1 span {
+nav .logo-text h1 span {
     color: #62741b;
 }
 .header-content {
