@@ -145,7 +145,7 @@ $(document).ready(function () {
         delivery = true
     });
 
-    $("button#place-order").click(function (e) { 
+    $("button#place-order").one("click", function (e) { 
         e.preventDefault();
         $("button#deliver").hide()
         let name = $("input#name").val();
@@ -167,5 +167,8 @@ $(document).ready(function () {
             
             $("#customer-message").append("Your order is ready for pickup at our cafe. The total amount payable is " + getTotalMoney(totalOrderPrices, false));
         }
+        location.reload(true)
     });
+
+    
 });
