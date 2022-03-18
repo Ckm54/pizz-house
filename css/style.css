@@ -4,14 +4,14 @@
 .header  {
     text-align: center;
 }
-.logo-img {
+.logo-text {
     width: fit-content;
     height: fit-content;
 }
-.logo-img h1 {
+.logo-text h1 {
     color: #e48c04;
 }
-.logo-img h1 span {
+.logo-text h1 span {
     color: #62741b;
 }
 .header-content {
@@ -20,11 +20,24 @@
     justify-content: space-between;
 }
 
-.services {
+.services, .menu .menu-items {
     display: flex;
     justify-content: space-around;
     text-align: center;
 }
 .services div>img {
     height: 150px;
+}
+
+.menu {
+    text-align: center;
+}
+.menu .menu-items .menu-item img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+}
+
+.delivery, #deliver  {
+    display: none;
 }
