@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+}
+.header {
+    width: 100vw;
+}
+.header .logo-img {
+    width: fit-content;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 10px;
+}
+.header-img {
+    float: right;
+    right: 0;position: relative;
+}
+.header-img img {
+    margin-right: 0;
+    padding-right: 0;
+    position: absolute;
+}
