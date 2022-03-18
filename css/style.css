@@ -1,21 +1,21 @@
 *{
     box-sizing: border-box;
 }
-.header {
-    width: 100vw;
+.header  {
+    text-align: center;
 }
-.header .logo-img {
+.logo-img {
     width: fit-content;
-    margin-top: 20px;
-    margin-left: 20px;
-    padding: 10px;
+    height: fit-content;
 }
-.header-img {
-    float: right;
-    right: 0;position: relative;
+.logo-img h1 {
+    color: #e48c04;
 }
-.header-img img {
-    margin-right: 0;
-    padding-right: 0;
-    position: absolute;
+.logo-img h1 span {
+    color: #62741b;
+}
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
