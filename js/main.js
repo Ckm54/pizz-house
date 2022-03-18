@@ -1,3 +1,15 @@
+function GetPizzaDetails(size, crust, topping){
+    this.size = size;
+    this.crust = crust;
+    this.topping = topping;
+}
+
+let pizzaPrices = {
+    small: 600,
+    medium: 800,
+    large: 1000,
+}
+
 
 
 $(document).ready(function () {
