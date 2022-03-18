@@ -16,6 +16,12 @@ let crustPrices = {
     "glutten free": 180, 
 }
 
+let toppingPrices = {
+    pepperoni: 100,
+    "green olives": 50,
+    bacon: 120,
+}
+
 function getPizzaPrice(size) {
     let price = 0;
     switch (size) {
@@ -49,6 +55,8 @@ function getCrustPrice(crust) {
     }
 }
 
+
+
 $(document).ready(function () {
     $("button.btn-add").click(function (e) { 
         e.preventDefault();
@@ -61,6 +69,7 @@ $(document).ready(function () {
         });
         // console.log(getPizzaPrice(pizzaSize))
         // console.log(getCrustPrice(pizzaCrust))
+        console.log(pizzaTopping)
     });
     
 });
