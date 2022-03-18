@@ -55,7 +55,21 @@ function getCrustPrice(crust) {
     }
 }
 
-
+function getToppingPrice(toppingList){
+    let totalToppingPrice = 0
+    for(let i = 0; i < toppingList.length; i = i + 1) {
+        if (toppingList[i] == "bacon") {
+            totalToppingPrice += toppingPrices.bacon
+        } 
+        if(toppingList[i] == "pepperoni"){
+            totalToppingPrice += toppingPrices.pepperoni
+        }
+        if(toppingList[i] == "green-olives"){
+            totalToppingPrice += toppingPrices["green olives"]
+        }
+    }
+    return totalToppingPrice;
+}
 
 $(document).ready(function () {
     $("button.btn-add").click(function (e) { 
@@ -69,7 +83,7 @@ $(document).ready(function () {
         });
         // console.log(getPizzaPrice(pizzaSize))
         // console.log(getCrustPrice(pizzaCrust))
-        console.log(pizzaTopping)
+        console.log(getToppingPrice(pizzaTopping))
     });
     
 });
