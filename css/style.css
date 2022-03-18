@@ -19,3 +19,12 @@
     align-items: center;
     justify-content: space-between;
 }
+
+.services {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.services div>img {
+    height: 150px;
+}
