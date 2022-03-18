@@ -11,10 +11,26 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 </head>
 <body>
-    <section class="header container-fluid">
-        <div class="logo-text">
-            <h1>Pizz <span>House</span></h1>
-        </div>
+    <section class="header container-fluid" id="home">
+        <nav>
+            <div class="logo-text">
+                <h1>Pizz <span>House</span></h1>
+            </div>
+            <div class="links">
+                <div class="link">
+                    <a href="#home">Home</a>
+                </div>
+                <div class="link">
+                    <a href="#services">Services</a>
+                </div>
+                <div class="link">
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="link order-btn">
+                    <a href="#order">Order Now</a>
+                </div>
+            </div>
+        </nav>
         <div class="header-content">
             <div class="header-text">
                 <h1>QUALITY F<span>OO</span>DS</h1>
@@ -26,7 +42,7 @@
         </div>
     </section>
 
-    <section class="services">
+    <section class="services" id="services">
         <div class="order">
             <img src="./assets/icons/pizza.png" alt="">
             <h2>ORDER YOUR FOOD</h2>
@@ -41,7 +57,7 @@
         </div>
     </section>
 
-    <section class="menu">
+    <section class="menu container" id="menu">
         <h4>Fresh From PizzHouse</h4>
         <h2>OUR SPECIALTY</h2>
         <div class="menu-items">
@@ -60,7 +76,7 @@
         </div>
     </section>
 
-    <section class="order">
+    <section class="order container-fluid" id="order">
         <div class="overlay-order">
             <div class="control-top text-center" id="order">
                 <h2>ORDER YOURS</h2>
@@ -72,7 +88,7 @@
                         <h2>PLACE YOUR ODER HERE</h2>
                     </div>
                     <div class="row">
-                        <div class="col-sm-5">
+                        <div class="col-md-5">
                         <form action="">
                             <label for="select">Select Your Flavor</label>
                             <select class="form-control mb-3" id="name">
@@ -115,7 +131,7 @@
                             
                         </form>
                         </div>
-                        <div class="col-sm-7">
+                        <div class="col-md-7">
                         <div id="information">
                             <p>Place your order,fill the delivery form and make your payment and we will deliver in 2 hours</p>
                             <p id="regards">By Management</p>
@@ -123,7 +139,7 @@
                         <div class="choice">
                             <h2>Total Order: <span id="item-total"></span></h2>
                             <div id="your-orders">
-                            <table class="table table-sm  pizzatable">
+                            <table class="table order-table">
                                 <thead>
                                 <tr>
                                     <th scope="col">Name</th>
@@ -155,7 +171,11 @@
                             </form>
                         </div>
                         <button class="btn btn-outline-success" id="place-order">Place Order</button>
-                        </div>
+                        </div>er Now
+                        QUALITY FOODS
+                        HEALTHY FOODS FOR A HEALTHY BODY
+                        
+                        
                     </div>
                     </div>
                   </div>
@@ -164,7 +184,7 @@
         
     </section>
 
-    <footer>
+    <footer id="contact">
         <div class="logo-text">
             <h1>Pizz <span>House</span></h1>
         </div>
