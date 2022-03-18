@@ -90,9 +90,13 @@ $(document).ready(function () {
         // console.log(getToppingPrice(pizzaTopping))
         // console.log(orderTotal)
         let thisOrder = new GetPizzaDetails(pizzaName, pizzaSize, pizzaCrust, pizzaTopping)
-        console.log(thisOrder)
-        console.log(thisOrder.getOrderTotal())
-        $("#order").append('<tr><td id="pizza-name"> + ');
+        // console.log(thisOrder.getOrderTotal())
+        $("#order-table").append('<tr><td id="pizza-name">' + thisOrder.name + 
+                            '</td><td id = "pizza-size">' + thisOrder.size + 
+                            '</td><td id = "pizza-crust">' + thisOrder.crust + 
+                            '</td><td id = "pizza-topping">' + thisOrder.topping +
+                            '</td><td id = "order-total">' + thisOrder.getOrderTotal() + 
+                            '</td></tr>');
     });
     
 });
