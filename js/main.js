@@ -10,19 +10,42 @@ let pizzaPrices = {
     large: 1000,
 }
 
+let crustPrices = {
+    crispy: 200,
+    stuffed: 150,
+    "glutten free": 180, 
+}
+
 function getPizzaPrice(size) {
     let price = 0;
     switch (size) {
         case "small":
             price = pizzaPrices.small
             break;
+
         case "medium":
             price = pizzaPrices.medium
+            break;
+
         case "large":
             price = pizzaPrices.large
+            break;
     
         default:
             alert("Ensure you've chosen a correct size");
+    }
+    return price
+}
+
+function getCrustPrice(crust) {
+    if (crust == "crispy") {
+        return crustPrices.crispy;
+    } else if (crust == "stuffed") {
+        return crustPrices.stuffed;
+    } else if (crust == "glutten-free") {
+        return crustPrices["glutten free"];
+    } else {
+        alert("Error, Ensure you have chosen a correct crust type")
     }
 }
 
@@ -36,7 +59,8 @@ $(document).ready(function () {
         $.each($("input[name='toppings']:checked"), function () { 
             pizzaTopping.push($(this).val());
         });
-
+        // console.log(getPizzaPrice(pizzaSize))
+        // console.log(getCrustPrice(pizzaCrust))
     });
     
 });
