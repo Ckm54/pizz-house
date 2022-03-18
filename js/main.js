@@ -128,6 +128,7 @@ $(document).ready(function () {
         e.preventDefault();
         let totalPayable = getTotalMoney(totalOrderPrices, false)
         $("button#checkout").hide();
+        $("button#deliver").show();
         $("button.deliver").slideDown(1000);
         $("#delivery-cost").slideDown(1000);
         $("#order-total-message").append("Your total bill is Ksh. " + totalPayable);
@@ -136,9 +137,9 @@ $(document).ready(function () {
     
     $("button#deliver").click(function (e) { 
         e.preventDefault();
-        $("button#deliver").hide();
         $(".delivery").show();
         let totalPayable = getTotalMoney(totalOrderPrices, true);
+        $("#customer-message").text("");
         $("#order-total-message").text("")
         $("#order-total-message").append("Your total bill with delivery fee is Ksh. " + totalPayable);
         delivery = true
@@ -146,11 +147,25 @@ $(document).ready(function () {
 
     $("button#place-order").click(function (e) { 
         e.preventDefault();
+        $("button#deliver").hide()
+        let name = $("input#name").val();
+        let mobile = $("input#phone").val();
+        let location = $("input#location").val();
+
         if(delivery){
-            console.log(getTotalMoney(totalOrderPrices, true))
+            let totalAmount = getTotalMoney(totalOrderPrices, true)
+            if (name && mobile && location !== "") {
+                $("#customer-message").append(name + ", we have received your order and it will be delivered to you at " + location + ", please prepare Ksh. " + totalAmount);
+                $("#customer-message").slideDown();
+                $(".delivery").hide();
+            } else {
+                alert("Please fill in the details for delivery to be made")
+            }
+            $("form").reset()
         }
         else {
-            console.log(getTotalMoney(totalOrderPrices, false))
+            
+            $("#customer-message").append("Your order is ready for pickup at our cafe. The total amount payable is " + getTotalMoney(totalOrderPrices, false));
         }
     });
 });
