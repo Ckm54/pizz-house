@@ -10,7 +10,21 @@ let pizzaPrices = {
     large: 1000,
 }
 
-
+function getPizzaPrice(size) {
+    let price = 0;
+    switch (size) {
+        case "small":
+            price = pizzaPrices.small
+            break;
+        case "medium":
+            price = pizzaPrices.medium
+        case "large":
+            price = pizzaPrices.large
+    
+        default:
+            alert("Ensure you've chosen a correct size");
+    }
+}
 
 $(document).ready(function () {
     $("button.btn-add").click(function (e) { 
