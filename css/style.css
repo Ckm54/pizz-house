@@ -103,7 +103,11 @@ nav .logo-text h1 span:hover {
     color: #f18f01;
 }
 
-
+.services {
+    background: #e48c04;
+    padding: 10px 0 5% 0;
+    margin-top: -60px;
+}
 
 .services, .menu .menu-items {
     display: flex;
@@ -111,7 +115,18 @@ nav .logo-text h1 span:hover {
     text-align: center;
 }
 .services div>img {
-    height: 150px;
+    height: 100px;
+}
+.services>div {
+    padding: 10px 20px;
+    width: 33.3%;
+}
+.services .info {
+    margin-top: 20px;
+}
+.services .info p {
+    text-align: center;
+    padding: 0 30px;
 }
 
 .menu {
