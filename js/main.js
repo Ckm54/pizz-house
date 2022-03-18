@@ -1,3 +1,5 @@
+let deliveryCost = 200;
+
 function GetPizzaDetails(name, size, crust, topping){
     this.name = name;
     this.size = size;
@@ -125,5 +127,12 @@ $(document).ready(function () {
         
     });
     
-    
+    $("button#deliver").click(function (e) { 
+        e.preventDefault();
+        $("button#deliver").hide();
+        $(".delivery").show();
+        let totalPayable = getTotalMoney(totalOrderPrices)+deliveryCost;
+        $("#order-total-message").text("")
+        $("#order-total-message").append("Your total bill with delivery fee is Ksh. " + totalPayable);
+    });
 });
