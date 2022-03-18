@@ -75,6 +75,20 @@ function getToppingPrice(toppingList){
     return totalToppingPrice;
 }
 
+let quantity = 0
+let totalOrderPrices = []
+
+function getTotalQuantity(){
+    quantity += 1;
+    $("#item-total").text(quantity);
+    console.log($("#order-total").innerHTML)
+}
+
+function getTotalMoney(prices){
+    let total = 0;
+    total += prices.reduce((a, b) => a + b);
+    return total
+}
 $(document).ready(function () {
     $("button.btn-add").click(function (e) { 
         e.preventDefault();
@@ -89,7 +103,7 @@ $(document).ready(function () {
         // console.log(getCrustPrice(pizzaCrust))
         // console.log(getToppingPrice(pizzaTopping))
         // console.log(orderTotal)
-        let thisOrder = new GetPizzaDetails(pizzaName, pizzaSize, pizzaCrust, pizzaTopping)
+        let thisOrder = new GetPizzaDetails(pizzaName, pizzaSize, pizzaCrust, pizzaTopping);
         // console.log(thisOrder.getOrderTotal())
         $("#order-table").append('<tr><td id="pizza-name">' + thisOrder.name + 
                             '</td><td id = "pizza-size">' + thisOrder.size + 
@@ -97,6 +111,19 @@ $(document).ready(function () {
                             '</td><td id = "pizza-topping">' + thisOrder.topping +
                             '</td><td id = "order-total">' + thisOrder.getOrderTotal() + 
                             '</td></tr>');
+        getTotalQuantity();
+        totalOrderPrices.push(thisOrder.getOrderTotal())
     });
+
+    $("button#checkout").click(function (e) { 
+        e.preventDefault();
+        let totalPayable = getTotalMoney(totalOrderPrices)
+        $("button#checkout").hide();
+        $("button.deliver").slideDown(1000);
+        $("#delivery-cost").slideDown(1000);
+        $("#order-total-message").append("Your total bill is Ksh. " + totalPayable);
+        
+    });
+    
     
 });
