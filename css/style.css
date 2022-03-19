@@ -12,14 +12,14 @@ nav {
     padding: 10px 20px;
     margin: 0 30px;
 }
-nav .links {
+nav .links, nav .logo-text {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 nav .links .link {
     margin-right: 20px;
-    padding: 5px;
+    padding: 0 5px;
 }
 nav .links .link a {
     text-decoration: none;
@@ -40,10 +40,8 @@ nav .links .order-btn {
 nav .links .order-btn:hover {
     background: none;
 }
-nav .logo-text {
-    width: fit-content;
-    height: fit-content;
-    transition: all 0.3s ease-in;
+nav .logo-text img {
+    color: #f18f01;
 }
 nav .logo-text  a {
     text-decoration: none;
@@ -57,7 +55,7 @@ nav .logo-text h1:hover {
 nav .logo-text h1 span {
     color: #62741b;
 }
-nav .logo-text h1 span:hover {
+nav .logo-text h1:hover span {
     color: #e48c04;
 }
 
@@ -108,7 +106,6 @@ nav .logo-text h1 span:hover {
     padding: 10px 0 5% 0;
     margin-top: -60px;
 }
-
 .services, .menu .menu-items {
     display: flex;
     justify-content: space-around;
@@ -129,15 +126,30 @@ nav .logo-text h1 span:hover {
     padding: 0 30px;
 }
 
+
 .menu {
     text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+.menu h4 {
+    color: #f18f01;
+}
+.menu h2 {
+    border-bottom: 2px solid #f18f01;
+    padding-bottom: 10px;
+}
+.menu .menu-items {
+    margin-top: 30px;
 }
 .menu .menu-items .menu-item img {
-    width: 350px;
-    height: 350px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
 }
-
+.menu .menu-items .menu-item h3 {
+    padding: 10px 0;
+}
 .delivery, #deliver  {
     display: none;
 }
