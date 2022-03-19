@@ -162,11 +162,12 @@ $(document).ready(function () {
         delivery = true
     });
 
-    $("button#place-order").one("click", function (e) { 
+    $("button#place-order").click(function (e) { 
         e.preventDefault();
         $("button#deliver").hide();
         $("button.btn-add").hide();
         $("button.btn-delete").hide();
+        $("button#place-order").hide()
         let name = $("input#name").val();
         let mobile = $("input#phone").val();
         let location = $("input#location").val();
@@ -178,12 +179,12 @@ $(document).ready(function () {
                 $("#customer-message").slideDown();
                 $(".delivery").hide();
             } else {
-                alert("Please fill in the details for delivery to be made")
-            }
-            $("form").reset()
+                alert("Please fill in the details for delivery to be made");
+                $(".delivery").show();
+                $("button#place-order").show()
+            } 
         }
         else {
-            
             $("#customer-message").append("Your order is ready for pickup at our cafe. The total amount payable is Ksh. <span>" + getTotalMoney(totalOrderPrices, false) + "</span> Welcome!");
         }
     });
