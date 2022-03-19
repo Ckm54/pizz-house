@@ -84,7 +84,6 @@ let totalOrderPrices = []
 function getTotalQuantity(){
     quantity += 1;
     $("#item-total").text(quantity);
-    console.log($("#order-total").innerHTML)
 }
 
 function getTotalMoney(prices, deliver){
@@ -96,11 +95,20 @@ function getTotalMoney(prices, deliver){
         return total + deliveryCost
     }
 }
-
+function deleteOrder(tid){
+    $(tid).empty();
+    $(tid).text("");
+    $("#item-total").text("");
+    getTotalMoney([0,0], false)
+    window.location.reload();
+}
 
 $(document).ready(function () {
+    $("button#place-order").hide()
     $("button.btn-add").click(function (e) { 
         e.preventDefault();
+        $("button.btn-add").text("");
+        $("button.btn-add").text("Add another Pizza");
         let pizzaName = $("#name option:selected").val();
         let pizzaSize = $("#size option:selected").val();
         let pizzaCrust = $("#crust option:selected").val();
@@ -129,9 +137,10 @@ $(document).ready(function () {
         let totalPayable = getTotalMoney(totalOrderPrices, false)
         $("button#checkout").hide();
         $("button#deliver").show();
+        $("button#place-order").show();
         $("button.deliver").slideDown(1000);
         $("#delivery-cost").slideDown(1000);
-        $("#order-total-message").append("Your total bill is Ksh. " + totalPayable);
+        $("#order-total-message").append("Your total bill is Ksh. <span>" + totalPayable + '</span>');
         delivery = false
     });
     
@@ -141,14 +150,15 @@ $(document).ready(function () {
         let totalPayable = getTotalMoney(totalOrderPrices, true);
         $("#customer-message").text("");
         $("#order-total-message").text("")
-        $("#order-total-message").append("Your total bill with delivery fee is Ksh. " + totalPayable);
+        $("#order-total-message").append("Your total bill with delivery fee is Ksh. <span>" + totalPayable + '</span>');
         delivery = true
     });
 
     $("button#place-order").one("click", function (e) { 
         e.preventDefault();
-        $("button#deliver").hide()
-        $("button.btn-add").hide()
+        $("button#deliver").hide();
+        $("button.btn-add").hide();
+        $("button.btn-delete").hide();
         let name = $("input#name").val();
         let mobile = $("input#phone").val();
         let location = $("input#location").val();
@@ -156,7 +166,7 @@ $(document).ready(function () {
         if(delivery){
             let totalAmount = getTotalMoney(totalOrderPrices, true)
             if (name && mobile && location !== "") {
-                $("#customer-message").append("Thank You, " + name + ", we have received your order and it will be delivered to you at " + location + ", please prepare Ksh. " + totalAmount);
+                $("#customer-message").append("Thank You, <span>" + name + "</span>, we have received your order and it will be delivered to you at " + location + ", please prepare Ksh. " + totalAmount);
                 $("#customer-message").slideDown();
                 $(".delivery").hide();
             } else {
@@ -168,6 +178,11 @@ $(document).ready(function () {
             
             $("#customer-message").append("Your order is ready for pickup at our cafe. The total amount payable is " + getTotalMoney(totalOrderPrices, false) + "Welcome!");
         }
-        location.reload(true)
+        window.location.reload();
+    });
+
+    $("button.btn-delete").click(function (e) { 
+        e.preventDefault();
+        deleteOrder("#order-table");
     });
 });
