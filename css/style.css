@@ -46,16 +46,17 @@ nav .logo-text img {
 nav .logo-text  a {
     text-decoration: none;
 }
-nav .logo-text h1 {
+nav .logo-text h1, .footer-info h3 {
     color: #e48c04;
 }
-nav .logo-text h1:hover {
+nav .logo-text h1:hover, .footer-info h3:hover {
+    cursor: pointer;
     color: #62741b;
 }
-nav .logo-text h1 span {
+nav .logo-text h1 span, .footer-info h3 span {
     color: #62741b;
 }
-nav .logo-text h1:hover span {
+nav .logo-text h1:hover span, .footer-info h3:hover span {
     color: #e48c04;
 }
 
@@ -201,4 +202,40 @@ nav .logo-text h1:hover span {
 }
 table .table-body tr:nth-child(even) {
     background-color: #f2f2f2;
+}
+.footer-info, footer {
+    background: black;
+    color: #fff;
+}
+.footer-info a, footer a {
+    text-decoration: none;
+    color: #f18f01;
+}
+.footer-info a:hover, footer a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.footer-info h4 {
+    text-align: center;
+    margin: 10px 0 20px 0;
+}
+.footer-info {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px 10px 0;
+}
+.hours td {
+    text-align: center;
+    padding: 10px 20px;
+}
+.footer-info .closed {
+    background: #f18f01;
+    text-align: center;
+}
+.useful-links .link {
+    text-align: center;
+    padding: 5px;
+}
+footer > span {
+    margin: 10px 0 20px 10%;
 }
