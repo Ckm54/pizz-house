@@ -105,10 +105,10 @@ function deleteOrder(tid){
 
 $(document).ready(function () {
 
-    $(".menu-img").hover(function () {
-            $(".menu-info").show();
+    $(".menu-item").hover(function () {
+            $(this).find(".menu-info").show();
         }, function () {
-            $(".menu-info").slideUp();
+            $(this).find(".menu-info").slideUp();
         }
     );
 
