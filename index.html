@@ -102,7 +102,6 @@
                         <form action="">
                             <label for="select">Select Your Flavor</label>
                             <select class="form-control mb-3" id="name">
-                                <option value="" disabled selected>Select your favorite flavor here</option>
                                 <option value="Chicken Hawaiian">Chicken Hawaiian</option>
                                 <option value="Meat DEluxe">Meat Deluxe</option>
                                 <option value="Chicken Pepperoni">Chicken  Pepperoni</option>
@@ -110,7 +109,6 @@
                             </select>
                             <label for="select">Select Size</label>
                             <select class="form-control mb-3" id="size">
-                                <option selected value="0" disabled hidden>Select size here</option>
                                 <option value="large">Large  ksh. 1300</option>
                                 <option value="medium">Medium  ksh. 900</option>
                                 <option value="small">Small  ksh. 600</option>
@@ -118,7 +116,6 @@
                             
                             <label for="crust">Choose your favorite Crust!</label>
                             <select class="form-control mb-3" id="crust">
-                                <option selected value="0" disabled hidden>Select your preferred crust!</option>
                                 <option value="crispy">Crispy Crust ksh. 200</option>
                                 <option value="stuffed">Stuffed Crust ksh. 150</option>
                                 <option value="glutten-free">Glutten-free ksh. 180</option>
@@ -138,13 +135,13 @@
                             </div>
                             <br>
                             <button type="submit" class="btn btn-outline-success btn-add">Add Pizza</button>
+                            <button type="submit" class="btn btn-outline-danger btn-delete">Delete Order</button>
                             
                         </form>
                     </div>
                     <div class="col-md-7 col-sm-12 form-right">
                         <div id="information">
-                            <p>Place your order BY filling the delivery form and your order will be delivered and ready for pickup within 2 hours.</p>
-                            <p id="regards">By Management</p>
+                            <p>Place your order by filling the delivery form and your order will be delivered and ready for pickup within 2 hours.</p>
                         </div>
                         <div class="choice">
                             <h2>Total Order: <span id="item-total"></span></h2>
@@ -159,7 +156,7 @@
                                     <th scope="col">Total</th>
                                 </tr>
                                 </thead>
-                                <tbody id="order-table">
+                                <tbody id="order-table" class="table-body">
                                                     
                                 </tbody>
                             </table>
