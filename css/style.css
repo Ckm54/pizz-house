@@ -21,7 +21,8 @@ nav {
     padding: 15px 5%;
     background: black;
 }
-nav .logo-text a h1, nav .logo-text a h1 span, .footer-info .logo-text h3 {
+nav .logo-text a h1, nav .logo-text a h1 span, 
+.footer-info .logo-text h3, .footer-info .logo-text h3 span {
     font-family: 'Leckerli One', cursive;
 }
 nav .links, nav .logo-text {
@@ -213,6 +214,20 @@ nav .logo-text h1:hover span, .footer-info h3:hover span {
 }
 table .table-body tr:nth-child(even) {
     background-color: #f2f2f2;
+}
+table .table-body tr {
+    animation: fade-in-down .5s forwards;
+  }
+
+@keyframes fade-in-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+     }
+     100% {
+        opacity: 1;
+        transform: translateY(0);
+     }
 }
 .footer-info, footer {
     background: black;
