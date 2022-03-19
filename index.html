@@ -89,18 +89,16 @@
     </section>
 
     <section class="order container-fluid" id="order">
-        <div class="overlay-order">
-            <div class="control-top text-center" id="order">
-                <h2>ORDER YOURS</h2>
-            </div>
-            <div class="row">
-                <div class="container-fluid order" id="make-order">
-                    <div class="order-overlay">
-                    <div class="control-top text-center" id="Order-now"> 
-                        <h2>PLACE YOUR ODER HERE</h2>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-5">
+        <div class="control-top text-center" id="order">
+            <h2>ORDER YOURS</h2>
+        </div>
+        <div class="row">
+            <div class="container-fluid order">
+                <div class="text-center"> 
+                    <h3>PLACE YOUR ODER HERE</h3>
+                </div>
+                <div class="row order-form">
+                    <div class="col-md-5 col-sm-12 form-left">
                         <form action="">
                             <label for="select">Select Your Flavor</label>
                             <select class="form-control mb-3" id="name">
@@ -138,14 +136,14 @@
                                 <input type="checkbox" id="green-olives" value="green-olives" name="toppings">
                                 <label class="custom-control-label" for="green-olives">Green Olives @ 50</label>
                             </div>
-                            <br><br>
+                            <br>
                             <button type="submit" class="btn btn-outline-success btn-add">Add Pizza</button>
                             
                         </form>
-                        </div>
-                        <div class="col-md-7">
+                    </div>
+                    <div class="col-md-7 col-sm-12 form-right">
                         <div id="information">
-                            <p>Place your order,fill the delivery form and make your payment and we will deliver in 2 hours</p>
+                            <p>Place your order BY filling the delivery form and your order will be delivered and ready for pickup within 2 hours.</p>
                             <p id="regards">By Management</p>
                         </div>
                         <div class="choice">
@@ -166,7 +164,7 @@
                                 </tbody>
                             </table>
             
-                            <p id="delivery-cost">Home Delivery will cost an extra Ksh. 200</p>
+                            <p id="delivery-cost"><span>NB: </span>Home Delivery will cost an extra <span>Ksh. 200</span></p>
                             <p id="order-total-message"></p>
                             <p id="customer-message"></p>
                             </div>
@@ -183,15 +181,10 @@
                             </form>
                         </div>
                         <button class="btn btn-outline-success" id="place-order">Place Order</button>
-                        </div>
-                        
-                        
                     </div>
-                    </div>
-                  </div>
+                </div>
             </div>
         </div>
-        
     </section>
 
     <footer id="contact">
