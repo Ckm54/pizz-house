@@ -1,14 +1,17 @@
-# delani-studio
-Moringa Week 3 independent project
+# PIZZ-HOUSE
+This project creates a simplified version of an e-commerce system which enables a cafe owner be able to receive pizza orders both for pickup and delivery from customers.
 
-##### By Collins_54
-### It creates a delani studio replica landing page using html, css and javascript.
+#### By Collins_54
 
-![Alt text](./assets/delani.png?raw=true "Title")
+#### Home-page
+
+A  screenshot of the application's landing page
+
+![Alt text](./assets/screenshots/pizza-home.png?raw=true "Home Screen")
 
 ## Table of Content
 
-+ [Delani Studio](#delani-studio)
++ [Pizz House](#pizz-house)
 + [Description](#Description)
 + [Installation Requirements](#Installation)
 + [Languages and Frameworks used](#Languages-used)
@@ -17,7 +20,12 @@ Moringa Week 3 independent project
 + [Author's Info](#author-Info)
 
 ## Description
-This website replicates a given design about delani studio and attempts to implement javascript features and layout stylings given.
+This web application enables users be able to place their pizza orders online by choosing their preferred pizza type, toppings and crusts. For delivery option a customer has to input their location and contact details and afterwards gets an alert message that their delivery will soon be made
+
+#### Order-Page
+
+![Alt text](./assets/screenshots/pizza-order.png?raw=true "Order Page")
+
 
 ## Installation
 
@@ -54,12 +62,10 @@ This is a summary of the expected behaviors given input and output to the applic
 
 * JQUERY - javascript library to add more interractivity.
 
-* MAILCHIMP - used to create a newsletter subscription list
-
 ## Live Link
 
 You can preview the live working version here
-[Delani-studio](https://ckm54.github.io/delani-studio/)
+[Pizza-House](https://ckm54.github.io/delani-studio/)
 
 ## Reference
 * Materialize CSS
