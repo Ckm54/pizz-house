@@ -13,7 +13,7 @@ A  screenshot of the application's landing page
 
 + [Pizz House](#pizz-house)
 + [Description](#Description)
-+ [Installation Requirements](#Installation)
++ [Installation ](#Installation)
 + [Languages and Frameworks used](#Languages-used)
 + [Reference](#reference)
 + [Licence](#licence)
@@ -21,6 +21,9 @@ A  screenshot of the application's landing page
 
 ## Description
 This web application enables users be able to place their pizza orders online by choosing their preferred pizza type, toppings and crusts. For delivery option a customer has to input their location and contact details and afterwards gets an alert message that their delivery will soon be made
+
+You can preview the live working version here: 
+[Pizza-House](https://ckm54.github.io/pizz-house/)
 
 #### Order-Page
 
@@ -62,10 +65,6 @@ This is a summary of the expected behaviors given input and output to the applic
 
 * JQUERY - javascript library to add more interractivity.
 
-## Live Link
-
-You can preview the live working version here
-[Pizza-House](https://ckm54.github.io/delani-studio/)
 
 ## Reference
 * Materialize CSS
@@ -74,7 +73,7 @@ You can preview the live working version here
 
 ## Licence
 
-This software is licensed with the MIT license
+This software is licensed with the MIT license **Ckm54**
 
 ## Authors Info
 
@@ -82,4 +81,4 @@ Slack Profile - [Collins Kiplangat](https://app.slack.com/client/T0101L740P4/D02
 
 LinkedIn - [Collins Kiplangat](https://www.linkedin.com/in/collins-kiplangat-a1bab715a/)
 
-[Go Back to the top](#delani-studio)
+[Go Back to the top](#pizz-house)
