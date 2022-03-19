@@ -229,6 +229,7 @@ nav .logo-text h1:hover span, .footer-info h3:hover span {
 }
 #order-total-message, #customer-message {
     animation: fade-in-down .5s forwards;
+    color: green;
 }
 #information, #customer-message {
     color: green;
