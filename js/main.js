@@ -156,7 +156,7 @@ $(document).ready(function () {
         if(delivery){
             let totalAmount = getTotalMoney(totalOrderPrices, true)
             if (name && mobile && location !== "") {
-                $("#customer-message").append(name + ", we have received your order and it will be delivered to you at " + location + ", please prepare Ksh. " + totalAmount);
+                $("#customer-message").append("Thank You, " + name + ", we have received your order and it will be delivered to you at " + location + ", please prepare Ksh. " + totalAmount);
                 $("#customer-message").slideDown();
                 $(".delivery").hide();
             } else {
@@ -166,10 +166,8 @@ $(document).ready(function () {
         }
         else {
             
-            $("#customer-message").append("Your order is ready for pickup at our cafe. The total amount payable is " + getTotalMoney(totalOrderPrices, false));
+            $("#customer-message").append("Your order is ready for pickup at our cafe. The total amount payable is " + getTotalMoney(totalOrderPrices, false) + "Welcome!");
         }
         location.reload(true)
     });
-
-    
 });
