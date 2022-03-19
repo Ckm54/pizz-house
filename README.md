@@ -41,13 +41,14 @@ You can preview the live working version here:
 ### Behaviour Driven Development
 
 This is a summary of the expected behaviors given input and output to the application:
-| Behaviour             |    Input                   |  Output                                                                                      |
-| -------------         | -------------              | --------                                                                                     |
-| add pizza             | Click Add Pizza Button     | Pizza details and number of items on order displays on the order table.                      |
-| Check Total           | Click Checkout Button      | A message with total amout displays                                                          | 
-| Request For Delivery  | Click Home Delivery Button | A form for user to enter location and contact displays.                                      |
-| Place Order           | Click Place Order Button   | A message with total amout displays and for home delivery name and amount inclusive displays |
-| Delete Order          | Click Delete Order Button  | The order table is cleared and page refreshed for user to place order again                  |
+| Behaviour                 |    Input                   |  Output                                                                                      |
+| -------------             | -------------              | --------                                                                                     |
+| Check Menu items details  | Hover on menu images       | Text description about each item fades in and user can read more about a specific item       |
+| add pizza                 | Click Add Pizza Button     | Pizza details and number of items on order displays on the order table.                      |
+| Check Total               | Click Checkout Button      | A message with total amout displays                                                          | 
+| Request For Delivery      | Click Home Delivery Button | A form for user to enter location and contact displays.                                      |
+| Place Order               | Click Place Order Button   | A message with total amout displays and for home delivery name and amount inclusive displays |
+| Delete Order              | Click Delete Order Button  | The order table is cleared and page refreshed for user to place order again                  |
 
 
 ### Installation Process
