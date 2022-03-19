@@ -157,18 +157,39 @@ nav .logo-text h1:hover span, .footer-info h3:hover span {
 .menu .menu-items {
     margin-top: 30px;
 }
+.menu .menu-items .menu-item {
+    flex: 1;
+}
 .menu .menu-items .menu-item img {
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 350px;
     border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.menu .menu-items .menu-item img:hover {
+    transform: scale(1.1);
 }
 .menu .menu-items .menu-item h3 {
-    padding: 10px 0;
+    padding: 15px 0 0 0;
+    color: green;
+}
+.menu .menu-items .menu-item .menu-info {
+    width: 100%;
+    padding: 5px 15px;
+    text-align: justify;
+    animation: fade-in-down .5s forwards;
+    display: none;
 }
 .delivery, #deliver  {
     display: none;
 }
-
+.order-container {
+    margin-top: 20px;
+}
+.order-container .text-center h2 {
+    color: #f18f01;
+}
 .order {
     padding: 20px 30px;
 }
