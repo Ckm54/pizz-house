@@ -407,3 +407,28 @@ footer > span {
     }
 }
 
+@media (max-width: 300px) {
+    * p {
+        font-size: 10px;
+    }
+    #your-orders .order-table{
+        font-size: 8px;
+    }
+    .order .btn {
+        font-size: 10px;
+    }
+    .footer-info {
+        font-size: 10px;
+    }
+    .form-left, .form-left select {
+        font-size: 10px;
+    }
+    .footer-info .logo-text, .footer-info .useful-links h4, 
+    .footer-info .useful-links .link, .footer-info .hours h4 {
+        font-size: 10px;
+    }
+    .footer-info .useful-links h4, 
+    .footer-info .hours h4 {
+        font-size: 12px;
+    }
+}
