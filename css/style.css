@@ -227,6 +227,9 @@ nav .logo-text h1:hover span, .footer-info h3:hover span {
 #delivery-cost span {
     color: crimson;
 }
+#order-total-message, #customer-message {
+    animation: fade-in-down .5s forwards;
+}
 #information, #customer-message {
     color: green;
 }
@@ -238,7 +241,7 @@ table .table-body tr:nth-child(even) {
 }
 table .table-body tr {
     animation: fade-in-down .5s forwards;
-  }
+}
 
 @keyframes fade-in-down {
     0% {
