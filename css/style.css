@@ -40,7 +40,7 @@ nav .links .link a {
     font-size: 20px;
     transition: all 0.3s ease;
 }
-nav .links .order-btn:hover a {
+nav .links .order-btn:hover a, nav .links .link a:hover {
     color: #988262;
 }
 nav .links .order-btn {
@@ -257,6 +257,12 @@ footer > span {
     .header-img img {
         width: 600px;
     }
+    .header-text {
+        padding-bottom: 30px;
+    }
+    .services {
+        margin-top: 0;
+    }
 }
 @media (max-width: 1100px) {
     .header-text h1 {
@@ -273,7 +279,7 @@ footer > span {
         margin-top: -40px;
     }
     .services {
-        margin-top: 30px;
+        margin-top: 0;
     }
     .services .info h3 {
         font-size: 20px;
@@ -298,7 +304,10 @@ footer > span {
 }
 
 @media (max-width: 999px) {
-    .header-text, nav {
+    nav {
+        padding-left: 10px;
+    }
+    .header-text {
         margin-left: 5px;
     }
     .menu .menu-items .menu-item img {
@@ -334,9 +343,6 @@ footer > span {
     nav .links {
         display: none;
     }
-    .header-text, nav {
-        margin-left: 5px;
-    }
     .header-text h1 {
         font-size: 60px;
     }
@@ -353,7 +359,6 @@ footer > span {
         display: none;
     }
     .services {
-        margin-top: 30px;
         display: block;
     }
     .services>div {
