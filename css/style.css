@@ -78,7 +78,7 @@ nav .logo-text h1:hover span {
     color: #e48c04;
 }
 .header-text p {
-    color: #e48c04;
+    color: green;
     font-size: 30px;
 }
 .header-text button {
@@ -168,4 +168,37 @@ nav .logo-text h1:hover span {
 }
 .order .btn {
     margin-top: 25px;
+}
+.order-form form input {
+    margin-top: 10px;
+    padding: 5px;
+}
+.order-form select {
+    margin-top: 10px;
+    border-color: #f18f01;
+}
+.order-form select:focus {
+    border-color: #e48c04 !important;
+    box-shadow: none!important;
+}
+.order-form form .topping label:hover, select:hover {
+    cursor: pointer;
+}
+#order-total-message span {
+    color: #f18f01;
+}
+.btn-delete {
+    margin-left: 50px;
+}
+#delivery-cost span {
+    color: crimson;
+}
+#information, #customer-message {
+    color: green;
+}
+#customer-message span {
+    color: #f18f01;
+}
+table .table-body tr:nth-child(even) {
+    background-color: #f2f2f2;
 }
