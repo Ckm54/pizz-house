@@ -104,6 +104,14 @@ function deleteOrder(tid){
 }
 
 $(document).ready(function () {
+
+    $(".menu-img").hover(function () {
+            $(".menu-info").show();
+        }, function () {
+            $(".menu-info").slideUp();
+        }
+    );
+
     $("button#place-order").hide()
     $("button.btn-add").click(function (e) { 
         e.preventDefault();
