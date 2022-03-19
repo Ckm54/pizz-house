@@ -178,7 +178,6 @@ $(document).ready(function () {
             
             $("#customer-message").append("Your order is ready for pickup at our cafe. The total amount payable is <span>" + getTotalMoney(totalOrderPrices, false) + "</span> Welcome!");
         }
-        window.location.reload();
     });
 
     $("button.btn-delete").click(function (e) { 
