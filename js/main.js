@@ -125,7 +125,7 @@ $(document).ready(function () {
         $("#order-table").append('<tr><td id="pizza-name">' + thisOrder.name + 
                             '</td><td id = "pizza-size">' + thisOrder.size + 
                             '</td><td id = "pizza-crust">' + thisOrder.crust + 
-                            '</td><td id = "pizza-topping">' + thisOrder.topping +
+                            '</td><td id = "pizza-topping">' + thisOrder.topping.join(", ") +
                             '</td><td id = "order-total">' + thisOrder.getOrderTotal() + 
                             '</td></tr>');
         getTotalQuantity();
