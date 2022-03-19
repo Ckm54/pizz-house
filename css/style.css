@@ -63,6 +63,7 @@ nav .logo-text h1:hover span, .footer-info h3:hover span {
     align-items: center;
     justify-content: space-between;
 }
+
 .header-text {
     margin-left: 10%;
     text-align: justify;
@@ -155,6 +156,7 @@ nav .logo-text h1:hover span, .footer-info h3:hover span {
     padding: 20px 30px;
 }
 .order .order-form {
+    display: flex;
     margin-top: 20px;
 }
 .form-left {
@@ -231,11 +233,88 @@ table .table-body tr:nth-child(even) {
     padding: 5px;
 }
 footer > span {
-    margin: 10px 0 20px 10%;
+    margin: 10px 0 20px 5%;
 }
 
 
-@media (max-width: 500px) {
+@media (max-width: 1400px) {
+    .header-img img {
+        width: 600px;
+    }
+}
+@media (max-width: 1100px) {
+    .header-text h1 {
+        font-size: 70px;
+    }
+    .header-text p {
+        font-size: 20px;
+    }
+    .header-text button {
+        padding: 15px 20px;
+    }
+    .header-img img {
+        width: 400px;
+        margin-top: -40px;
+    }
+    .services {
+        margin-top: 30px;
+    }
+    .services .info h3 {
+        font-size: 20px;
+    }
+    .services .info p {
+        padding: 0;
+        text-align: justify;
+        font-size: 15px;
+    }
+    nav .links .link a {
+        font-size: 15px;
+    }
+    .menu .menu-items .menu-item img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    .menu .menu-items .menu-item h3 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 999px) {
+    .header-text, nav {
+        margin-left: 5px;
+    }
+    .menu .menu-items .menu-item img {
+        width: 90%;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    .order .order-form {
+        display: block;
+    }
+    .form-left, .form-right {
+        width: 100%;
+    }
+    .form-left {
+        padding-right: 0;
+    }
+    .form-right {
+        padding-left: 0;
+    }
+    .order .btn {
+        margin-bottom: 25px;
+    }
+    .footer-info .logo-text {
+        text-align: center;
+    }
+    footer > span {
+        margin: 10px;
+    }
+}
+
+@media (max-width: 600px) {
     nav .links {
         display: none;
     }
@@ -304,8 +383,8 @@ footer > span {
     .order-table {
         width: 100%;
     }
-    .order-table tbody tr td {
-        font-size: 120x;
+    #your-orders .order-table{
+        font-size: 13px;
     }
     .footer-info {
         display: block;
@@ -327,3 +406,4 @@ footer > span {
         font-size: 10px;
     }
 }
+
