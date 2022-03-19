@@ -148,6 +148,7 @@ $(document).ready(function () {
     $("button#place-order").one("click", function (e) { 
         e.preventDefault();
         $("button#deliver").hide()
+        $("button.btn-add").hide()
         let name = $("input#name").val();
         let mobile = $("input#phone").val();
         let location = $("input#location").val();
