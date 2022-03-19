@@ -1,16 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bree+Serif&family=Leckerli+One&display=swap');
 *{
     box-sizing: border-box;
+    font-family: 'Bree Serif', serif;
 }
 .header  {
     text-align: center;
 }
+.header .header-text .intro-text {
+    color: #988262;
+    font-size: 25px;
+}
+.header .header-text .intro-text span {
+    font-family: 'Leckerli One', cursive;
+    color: #f18f01;
+}
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 10px 20px;
-    margin: 0 30px;
+    padding: 15px 5%;
+    background: black;
+}
+nav .logo-text a h1, nav .logo-text a h1 span, .footer-info .logo-text h3 {
+    font-family: 'Leckerli One', cursive;
 }
 nav .links, nav .logo-text {
     display: flex;
@@ -62,22 +74,26 @@ nav .logo-text h1:hover span, .footer-info h3:hover span {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background: black;
 }
 
 .header-text {
-    margin-left: 10%;
+    margin-left: 5%;
     text-align: justify;
 }
 .header-text h1 {
     font-family: 'Cabin Sketch', cursive;
     font-size: 100px;
+    color: #fff;
 }
 .header-text h1 span {
     color: #e48c04;
+    font-family: 'Cabin Sketch', cursive;
 }
 .header-text p {
     color: green;
     font-size: 30px;
+    font-family: 'Bree Serif', serif;
 }
 .header-text button {
     border: 2px solid #f18f01;
