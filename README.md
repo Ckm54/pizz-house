@@ -47,6 +47,7 @@ This is a summary of the expected behaviors given input and output to the applic
 | Check Total           | Click Checkout Button      | A message with total amout displays                                                          | 
 | Request For Delivery  | Click Home Delivery Button | A form for user to enter location and contact displays.                                      |
 | Place Order           | Click Place Order Button   | A message with total amout displays and for home delivery name and amount inclusive displays |
+| Delete Order          | Click Delete Order Button  | The order table is cleared and page refreshed for user to place order again                  |
 
 
 ### Installation Process
